@@ -1,0 +1,15 @@
+{
+  "id": "zen-my-mods",
+  "name": "My Mods",
+  "description": "Enhance Zen Browser",
+  "homepage": "https://github.com/muhammad-f-huda/",
+  "style": "https://raw.githubusercontent.com/muhammad-f-huda/zen-my-mods/main/chrome.css",
+  "readme": "https://raw.githubusercontent.com/muhammad-f-huda/zen-my-mods/main/readme.md",
+  "image": "https://raw.githubusercontent.com/muhammad-f-huda/zen-my-mods/main/image.png",
+  "author": "muhammad-f-huda",
+  "version": "1.0.0",
+  "tags": [],
+  "createdAt": "2024-11-05",
+  "updatedAt": "2024-11-05",
+  "enabled": true
+}
