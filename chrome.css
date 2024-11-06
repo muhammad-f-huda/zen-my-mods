@@ -16,4 +16,19 @@
     margin-left: 1px !important;
   }
 
+  #tabbrowser-tabs:not([secondarytext-unsupported]) {
+    height: 45px;
+  }
+
+  #tabbrowser-tabs .tabbrowser-tab:not([pinned]):is([visuallyselected]):not(:hover) .tab-close-button {
+    display: none !important;
+  }
+
+  .nav-bar-customization-target .toolbarbutton-1 {
+    padding: 0 4px !important;
+  }
+
+  .customization-target .toolbarbutton-1 {
+    padding: 4px 0 !important;
+  }
 }
