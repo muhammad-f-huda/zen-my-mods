@@ -1,34 +1,39 @@
 @-moz-document url-prefix("chrome:") {
 
   .urlbar-page-action {
-    margin-left: 10px !important;
+    margin-left: 15px !important;
+  }
+
+  .zen-sidebar-top-buttons {
+    padding-left: 0 !important;
   }
 
   #tabbrowser-tabpanels {
-    --zen-webview-border-radius: 0;
     --zen-element-separation: 5px;
-    --zen-main-browser-background: #000000 !important;
+    --zen-main-browser-background: #000000;
+    --zen-webview-border-radius: 8px;
     padding: 0px !important;
     margin: 0px !important;
   }
 
-  #tabbrowser-tabpanels:not([zen-split-view="true"]) {
-    margin-left: 1px !important;
+  #tabbrowser-tabpanels .browserSidebarContainer {
+    border: 1px solid #333;
+    overflow: hidden;
   }
 
-  #tabbrowser-tabs:not([secondarytext-unsupported]) {
-    height: 45px;
+  #tabbrowser-tabs[orient="vertical"] {
+    --tab-min-height: 40px;
   }
 
   #tabbrowser-tabs .tabbrowser-tab:not([pinned]):is([visuallyselected]):not(:hover) .tab-close-button {
     display: none !important;
   }
 
-  .nav-bar-customization-target .toolbarbutton-1 {
-    padding: 0 4px !important;
+  #TabsToolbar-customization-target .toolbarbutton-1 {
+    padding: 4px 12px !important;
   }
 
-  .customization-target .toolbarbutton-1 {
-    padding: 4px 0 !important;
+  #zen-sidebar-icons-wrapper .toolbarbutton-1 {
+    padding: 3px 5px !important;
   }
 }
