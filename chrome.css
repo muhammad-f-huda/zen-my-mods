@@ -17,12 +17,17 @@
   }
 
   #tabbrowser-tabpanels .browserSidebarContainer {
+    background-color: #333;
     border: 1px solid #333;
     overflow: hidden;
   }
 
   #tabbrowser-tabs[orient="vertical"] {
     --tab-min-height: 40px;
+  }
+
+  .tab-label-container {
+    height: auto !important;
   }
 
   #tabbrowser-tabs .tabbrowser-tab:not([pinned]):is([visuallyselected]):not(:hover) .tab-close-button {
