@@ -8,6 +8,7 @@
     padding-left: 0 !important;
   }
 
+  /* adjust browser container */
   #tabbrowser-tabpanels {
     --zen-element-separation: 5px;
     --zen-main-browser-background: #000000;
@@ -22,34 +23,74 @@
     overflow: hidden;
   }
 
+  /* bottom tabs */
   #tabbrowser-tabs[orient="vertical"] {
     --tab-min-height: 40px;
   }
 
+  /* tabs */
   .tab-label-container {
     height: auto !important;
   }
 
-  #zen-essentials-container .tab-icon-image {
-    width: 28px !important;
-    height: 28px !important;
-    object-fit: contain;
+  #zen-essentials-container {
+    & .tab-icon-image {
+      width: 28px !important;
+      height: 28px !important;
+      object-fit: contain;
+    }
+
+    /* adjust essentials tab icon indicator position */
+    & .tab-icon-overlay {
+      width: 18px !important;
+      height: 18px !important;
+
+      &:not([indicator-replaces-favicon]) {
+        &:is([soundplaying], [muted], [activemedia-blocked]) {
+          top: -8px !important;
+          right: -24px !important;
+        }
+      }
+    }
   }
 
-  #tabbrowser-arrowscrollbox .tab-icon-image {
-    width: 24px !important;
-    height: 24px !important;
-    object-fit: contain;
+  #tabbrowser-arrowscrollbox {
+    & .tab-icon-image {
+      width: 24px !important;
+      height: 24px !important;
+      object-fit: contain;
+    }
+
+    /* adjust tab icon indicator position */
+    & .tab-icon-overlay {
+      &:not([indicator-replaces-favicon]) {
+        &:is([soundplaying], [muted], [activemedia-blocked]) {
+          top: -8px !important;
+          right: -16px !important;
+        }
+      }
+    }
+
+    /* adjust tab label */
+    & .tab-label {
+      font-weight: 500;
+    }
   }
 
-  #tabbrowser-arrowscrollbox .tab-label {
-    font-weight: bold;
+  /* only show close tab button on hover */
+  #tabbrowser-tabs {
+    & .tabbrowser-tab {
+
+      &:is([pinned]),
+      &:not(:hover) {
+        .tab-close-button {
+          display: none !important;
+        }
+      }
+    }
   }
 
-  #tabbrowser-tabs .tabbrowser-tab:not([pinned]):is([visuallyselected]):not(:hover) .tab-close-button {
-    display: none !important;
-  }
-
+  /* bottom toolbar */
   #TabsToolbar-customization-target .toolbarbutton-1 {
     padding: 4px 12px !important;
   }
