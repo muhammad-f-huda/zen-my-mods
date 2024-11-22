@@ -35,6 +35,7 @@
 
   #zen-essentials-container {
     & .tab-icon-image {
+      border-radius: 8px;
       width: 28px !important;
       height: 28px !important;
       object-fit: contain;
@@ -56,6 +57,7 @@
 
   #tabbrowser-arrowscrollbox {
     & .tab-icon-image {
+      border-radius: 6px;
       width: 24px !important;
       height: 24px !important;
       object-fit: contain;
