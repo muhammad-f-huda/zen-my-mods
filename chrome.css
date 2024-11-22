@@ -28,11 +28,6 @@
     --tab-min-height: 40px;
   }
 
-  /* tabs */
-  .tab-label-container {
-    height: auto !important;
-  }
-
   #zen-essentials-container {
     & .tab-icon-image {
       border-radius: 8px;
@@ -49,12 +44,13 @@
       &:not([indicator-replaces-favicon]) {
         &:is([soundplaying], [muted], [activemedia-blocked]) {
           top: -8px !important;
-          right: -24px !important;
+          right: -22px !important;
         }
       }
     }
   }
 
+  #vertical-pinned-tabs-container,
   #tabbrowser-arrowscrollbox {
     & .tab-icon-image {
       border-radius: 6px;
