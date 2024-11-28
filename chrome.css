@@ -1,31 +1,61 @@
 @-moz-document url-prefix("chrome:") {
 
-  .urlbar-page-action {
-    margin-left: 15px !important;
+  #browser {
+    --zen-main-browser-background: #000;
   }
 
-  .zen-sidebar-top-buttons {
-    padding-left: 0 !important;
+  #zen-sidebar-top-buttons {
+    & #zen-sidebar-top-buttons-customization-target {
+      padding-left: 10px !important;
+      padding-right: 5px !important;
+    }
+  }
+
+  .sharing-icon,
+  #identity-icon,
+  #tracking-protection-icon,
+  #blocked-permissions-container {
+    & .blocked-permission-icon+.blocked-permission-icon {
+      margin-inline-start: 10px !important;
+    }
+  }
+
+  #page-action-buttons {
+    & .urlbar-page-action+.urlbar-page-action {
+      margin-inline-start: 15px !important;
+    }
   }
 
   /* adjust browser container */
+  #zen-tabbox-wrapper {
+    --zen-element-separation: 0;
+  }
+
   #tabbrowser-tabpanels {
-    --zen-element-separation: 5px;
-    --zen-main-browser-background: #000000;
-    --zen-webview-border-radius: 8px;
-    padding: 0px !important;
-    margin: 0px !important;
+    & .browserSidebarContainer {
+      background-color: #333;
+      border: 1px solid #333;
+      overflow: hidden;
+    }
   }
 
-  #tabbrowser-tabpanels .browserSidebarContainer {
-    background-color: #333;
-    border: 1px solid #333;
-    overflow: hidden;
-  }
+  #tabbrowser-tabs {
 
-  /* bottom tabs */
-  #tabbrowser-tabs[orient="vertical"] {
-    --tab-min-height: 40px;
+    /* bottom tabs */
+    &[orient="vertical"] {
+      --tab-min-height: 40px;
+    }
+
+    /* only show close tab button on hover */
+    & .tabbrowser-tab {
+
+      &:is([pinned]),
+      &:not(:hover) {
+        .tab-close-button {
+          display: none !important;
+        }
+      }
+    }
   }
 
   #zen-essentials-container {
@@ -72,19 +102,6 @@
     /* adjust tab label */
     & .tab-label {
       font-weight: 500;
-    }
-  }
-
-  /* only show close tab button on hover */
-  #tabbrowser-tabs {
-    & .tabbrowser-tab {
-
-      &:is([pinned]),
-      &:not(:hover) {
-        .tab-close-button {
-          display: none !important;
-        }
-      }
     }
   }
 
