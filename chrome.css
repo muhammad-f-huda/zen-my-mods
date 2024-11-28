@@ -105,6 +105,10 @@
     }
   }
 
+  #navigator-toolbox {
+    max-width: 430px !important;
+  }
+
   /* bottom toolbar */
   #TabsToolbar-customization-target .toolbarbutton-1 {
     padding: 4px 12px !important;
