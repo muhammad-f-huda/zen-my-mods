@@ -20,9 +20,14 @@
     }
   }
 
-  #page-action-buttons {
-    & .urlbar-page-action+.urlbar-page-action {
-      margin-inline-start: 15px !important;
+  /* adjust search container */
+  #urlbar[open] {
+    top: 15vh !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+
+    @media not (-moz-bool-pref: 'zen.view.compact') {
+      max-width: 70% !important;
     }
   }
 
