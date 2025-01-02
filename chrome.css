@@ -12,16 +12,16 @@
   }
 
   .sharing-icon,
-  #identity-icon,
-  #tracking-protection-icon,
-  #blocked-permissions-container {
-    & .blocked-permission-icon+.blocked-permission-icon {
-      margin-inline-start: 10px !important;
-    }
+  #blocked-permissions-container>.blocked-permission-icon {
+    margin-inline-start: 10px !important;
+  }
+
+  #page-action-buttons {
+    gap: 10px;
   }
 
   /* adjust search container */
-  #urlbar[open] {
+  /* #urlbar[open] {
     top: 15vh !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
@@ -29,7 +29,7 @@
     @media not (-moz-bool-pref: 'zen.view.compact') {
       max-width: 70% !important;
     }
-  }
+  } */
 
   /* adjust browser container */
   #zen-tabbox-wrapper {
