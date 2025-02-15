@@ -1,7 +1,9 @@
 @-moz-document url-prefix("chrome:") {
 
-  #browser {
-    --zen-main-browser-background: #000;
+  @media (prefers-color-scheme: dark) {
+    #browser {
+      --zen-main-browser-background: #000;
+    }
   }
 
   #zen-sidebar-top-buttons {
@@ -36,11 +38,13 @@
     --zen-element-separation: 0;
   }
 
-  #tabbrowser-tabpanels {
-    & .browserSidebarContainer {
-      background-color: #333;
-      border: 1px solid #333;
-      overflow: hidden;
+  @media (prefers-color-scheme: dark) {
+    #tabbrowser-tabpanels {
+      & .browserSidebarContainer {
+        background-color: #333;
+        border: 1px solid #333;
+        overflow: hidden;
+      }
     }
   }
 
