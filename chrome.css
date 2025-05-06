@@ -71,7 +71,9 @@
     }
   }
 
-  #zen-essentials-container {
+  .zen-essentials-container {
+
+    /* adjust essentials tab icon size */
     & .tab-icon-image {
       border-radius: 8px;
       width: 28px !important;
